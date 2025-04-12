@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact - Plomberie Pro</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100 text-gray-800">
+  <header class="bg-blue-600 text-white py-6">
+    <div class="container mx-auto px-4 flex justify-between items-center">
+      <h1 class="text-2xl font-bold">Plomberie Pro</h1>
+      <nav class="space-x-4">
+        <a href="index.html" class="hover:underline">Accueil</a>
+        <a href="services.html" class="hover:underline">Services</a>
+        <a href="a-propos.html" class="hover:underline">À propos</a>
+        <a href="contact.html" class="hover:underline">Contact</a>
+      </nav>
+    </div>
+  </header>
+  <section class="py-12">
+    <div class="container mx-auto px-4 max-w-lg">
+      <h2 class="text-2xl font-semibold mb-6 text-center">Contactez-nous</h2>
+      <form action="mailto:votre@email.com" method="POST" class="space-y-4">
+        <input type="text" name="nom" placeholder="Votre nom" required class="w-full p-2 border rounded">
+        <input type="email" name="email" placeholder="Votre email" required class="w-full p-2 border rounded">
+        <textarea name="message" rows="5" placeholder="Votre message" required class="w-full p-2 border rounded"></textarea>
+        <button type="submit" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Envoyer</button>
+      </form>
+    </div>
+  </section>
+</body>
+</html>
