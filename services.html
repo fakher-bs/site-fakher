@@ -1,33 +1,171 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Services - Plomberie Pro</title>
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-</head>
-<body class="bg-gray-100 text-gray-800">
-  <header class="bg-blue-600 text-white py-6">
-    <div class="container mx-auto px-4 flex justify-between items-center">
-      <h1 class="text-2xl font-bold">Plomberie Pro</h1>
-      <nav class="space-x-4">
-        <a href="index.html" class="hover:underline">Accueil</a>
-        <a href="services.html" class="hover:underline">Services</a>
-        <a href="a-propos.html" class="hover:underline">À propos</a>
-        <a href="contact.html" class="hover:underline">Contact</a>
-      </nav>
-    </div>
-  </header>
-  <section class="py-12">
-    <div class="container mx-auto px-4">
-      <h2 class="text-2xl font-semibold mb-6 text-center">Nos Services</h2>
-      <ul class="space-y-4">
-        <li>✔️ Dépannage rapide 24/7</li>
-        <li>✔️ Installation sanitaire</li>
-        <li>✔️ Rénovation de salles de bain</li>
-        <li>✔️ Recherche de fuites et réparations</li>
-      </ul>
-    </div>
-  </section>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Services - Plomberie Pro</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <script src="menu.js"></script>
+  <body class="bg-gray-100 text-gray-800">
+    <!-- Tailwind nécessaire + Heroicons via CDN si tu veux -->
+    <!-- Sinon tu peux utiliser n'importe quel SVG -->
+
+    <header
+      class="bg-gradient-to-r from-blue-500 to-blue-700 text-white px-4 py-4 shadow-md"
+    >
+      <div class="flex justify-between items-center">
+        <!-- Logo -->
+        <div class="flex items-center gap-3">
+          <img
+            src="images/logo.png"
+            alt="logo"
+            class="w-10 h-10 rounded shadow"
+          />
+          <div class="text-lg font-bold">BS-SANI-CHAUF</div>
+        </div>
+
+        <!-- Burger -->
+        <button id="burgerBtn" class="sm:hidden focus:outline-none">
+          <svg
+            class="w-8 h-8 text-white"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 6h16M4 12h16M4 18h16"
+            />
+          </svg>
+        </button>
+
+        <!-- Menu Desktop -->
+        <nav
+          class="hidden sm:flex gap-6 items-center text-white text-sm font-medium"
+        >
+          <a href="index.html" class="hover:underline flex items-center gap-1">
+            <svg
+              class="w-5 h-5"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M3 12l2-2m0 0l7-7 7 7M13 5v6h6M19 19H5a2 2 0 01-2-2V7"
+              />
+            </svg>
+            Accueil
+          </a>
+          <a
+            href="services.html"
+            class="hover:underline flex items-center gap-1"
+          >
+            <svg
+              class="w-5 h-5"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M9.75 17L15 12.75m0 0L9.75 8.5M15 12.75H3"
+              />
+            </svg>
+            Services
+          </a>
+          <a
+            href="a-propos.html"
+            class="hover:underline flex items-center gap-1"
+          >
+            <svg
+              class="w-5 h-5"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M5.121 17.804A9.003 9.003 0 0112 3a9.003 9.003 0 016.879 14.804M15 11a3 3 0 11-6 0 3 3 0 016 0z"
+              />
+            </svg>
+            À propos
+          </a>
+          <a
+            href="contact.html"
+            class="hover:underline flex items-center gap-1"
+          >
+            <svg
+              class="w-5 h-5"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M16 12h2a2 2 0 002-2V5a2 2 0 00-2-2h-2m-4 14h4M4 6h16M4 10h16M10 14h6M4 14h2"
+              />
+            </svg>
+            Contact
+          </a>
+        </nav>
+      </div>
+
+      <!-- Menu mobile -->
+      <div
+        id="menuMobile"
+        class="hidden sm:hidden mt-4 bg-white rounded shadow text-blue-600 p-4 space-y-3"
+      >
+        <a
+          href="index.html"
+          class="flex items-center gap-2 hover:text-blue-800"
+        >
+          🏠 Accueil
+        </a>
+        <a
+          href="services.html"
+          class="flex items-center gap-2 hover:text-blue-800"
+        >
+          🛠️ Services
+        </a>
+        <a
+          href="a-propos.html"
+          class="flex items-center gap-2 hover:text-blue-800"
+        >
+          ℹ️ À propos
+        </a>
+        <a
+          href="contact.html"
+          class="flex items-center gap-2 hover:text-blue-800"
+        >
+          📞 Contact
+        </a>
+      </div>
+    </header>
+    <section class="py-12">
+      <div class="container mx-auto px-4">
+        <h2 class="text-2xl font-semibold mb-6 text-center">Nos Services</h2>
+        <ul class="space-y-4">
+          <li>✔️ Dépannage rapide 24/7</li>
+          <li>✔️ Installation sanitaire</li>
+          <li>✔️ Rénovation de salles de bain</li>
+          <li>✔️ Recherche de fuites et réparations</li>
+        </ul>
+      </div>
+    </section>
+  </body>
 </html>
