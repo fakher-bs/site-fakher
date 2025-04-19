@@ -27,9 +27,8 @@
           <h1 class="text-xl font-bold">BS-SANI-CHAUF</h1>
         </div>
 
-        <!-- Checkbox + Label Burger -->
+        <!-- Burger (checkbox) -->
         <div class="sm:hidden">
-          <!-- le checkbox doit être AVANT le menu mobile -->
           <input type="checkbox" id="menu-toggle" class="hidden peer" />
           <label for="menu-toggle" class="cursor-pointer">
             <svg
@@ -48,7 +47,7 @@
           </label>
         </div>
 
-        <!-- Menu visible sur grand écran -->
+        <!-- Menu pour écrans larges -->
         <nav class="hidden sm:flex space-x-4">
           <a href="index.html" class="text-blue-600 hover:underline">Accueil</a>
           <a href="services.html" class="text-blue-600 hover:underline"
@@ -63,8 +62,8 @@
         </nav>
       </div>
 
-      <!-- Menu mobile (DOIT être juste après le checkbox) -->
-      <div class="peer-checked:block hidden sm:hidden mt-4" id="menu-mobile">
+      <!-- Menu déroulant mobile -->
+      <div class="peer-checked:block hidden sm:hidden mt-4">
         <nav class="flex flex-col space-y-2 text-blue-600">
           <a href="index.html" class="hover:underline">Accueil</a>
           <a href="services.html" class="hover:underline">Services</a>
